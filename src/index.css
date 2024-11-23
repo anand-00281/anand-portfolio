@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: linear-gradient(135deg, #282727, #201e1e);
+  background-size: cover;
+  background-repeat: none;
+}
+
+h2 {
+  @apply text-xl md:text-4xl;
+}
+
+p {
+  @apply text-xl tracking-tight leading-relaxed;
+}
+
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.shiny-effect {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(70, 161, 181, 0.2), transparent 70%);
+}
+
+/* Add this CSS to your styles */
+@keyframes shadowAnimation {
+  0% {
+      box-shadow: 0 0 100px rgba(69, 149, 179, 0.7); /* Increased size */
+  }
+  25% {
+      box-shadow: 0 0 100px rgba(20, 191, 225, 0.7); /* Increased size */
+  }
+  50% {
+      box-shadow: 0 0 100px rgba(25, 163, 131, 0.7); /* Increased size */
+  }
+  75% {
+      box-shadow: 0 0 100px rgba(19, 88, 13, 0.7); /* Increased size */
+  }
+  100% {
+      box-shadow: 0 0 100px rgba(21, 121, 141, 0.7); /* Increased size */
+  }
+}
+
+/* styles.css */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.animated-shadow {
+  animation: shadowAnimation 3s infinite;
+}
